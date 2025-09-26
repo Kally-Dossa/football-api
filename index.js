@@ -6,16 +6,20 @@ const app = express();
 
 app.use(express.json());
 
-const mongoUri = process.env.MONGO_PUBLIC_URL || process.env.MONGO_URI;
+const mongoUri = process.env.MONGO_URI || process.env.MONGO_PUBLIC_URL;
+
+if (!mongoUri) {
+  console.error("Missing MONGO_URI/MONGO_PUBLIC_URL");
+  process.exit(1);
+}
 
 mongoose
-  .connect(mongoUri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(mongoUri)
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
-
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
+  });
 const teamRoutes = require("./routes/teams");
 const playerRoutes = require("./routes/players");
 
