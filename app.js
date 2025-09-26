@@ -13,7 +13,10 @@ mongoose
   .catch((err) => console.log(err));
 
 const teamRoutes = require("./routes/teams");
+const playerRoutes = require("./routes/players");
+
 app.use("/teams", teamRoutes);
+app.use("/players", playerRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
