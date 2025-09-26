@@ -22,10 +22,3 @@ A simple RESTful API built with **Express.js** and **MongoDB** (using **Mongoose
 npm install
 ```
 
-**3. Setup configuration (e.g. database URI, port)**
-
-**4. Run**
- ```bash
-node app.js
-```
-
