@@ -4,7 +4,7 @@ It is easy to set up locally, and already deployed on Railway for quick online a
 
 ## Overview
 
-- Create, read, update, and delete (CRUD) teams
+- Create, read, update, and delete (CRUD) teams and players
 - JSON-based API  
 - Base URL (local): `http://localhost:5000/teams`
 - Base URL (local): `http://localhost:5000/players`
