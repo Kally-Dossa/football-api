@@ -37,6 +37,7 @@ PORT=5000
 node index.js
 ```
 The API will be available at `http://localhost:5000/teams`
+
 The API will be available at `http://localhost:5000/players`
 
 ## API Endpoints
