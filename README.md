@@ -6,10 +6,11 @@ It is easy to set up locally, and already deployed on Railway for quick online a
 
 - Create, read, update, and delete (CRUD) teams
 - JSON-based API  
-Base URL (local): `http://localhost:5000/teams`
-Base URL (local): `http://localhost:5000/players`
-Base URL (Railway): `https://football-api-production.up.railway.app/teams`
-Base URL (Railway): `https://football-api-production.up.railway.app/players`
+- Base URL (local): `http://localhost:5000/teams`
+- Base URL (local): `http://localhost:5000/players`
+- Base URL (Railway): `https://football-api-production.up.railway.app/teams`
+- Base URL (Railway): `https://football-api-production.up.railway.app/players`
+
 
 ## Get Started
 
@@ -40,24 +41,24 @@ The API will be available at `http://localhost:5000/players`
 
 ## API Endpoints
 **Teams**
-- GET /teams → list all teams
+- `GET /teams` → list all teams
 
-- POST /teams → create new team
+- `POST /teams` → create new team
 
-- GET /teams/:id → get team by id
+- `GET /teams/:id` → get team by id
 
-- PUT /teams/:id → update team
+- `PUT /teams/:id` → update team
 
-- DELETE /teams/:id → delete team
+- `DELETE /teams/:id` → delete team
 
 **Players**
 
-- GET /players → list all players
+- `GET /players` → list all players
 
-- POST /players → create new player
+- `POST /players` → create new player
 
-- GET /players/:id → get player by id
+- `GET /players/:id` → get player by id
 
-- PUT /players/:id → update player
+- `PUT /players/:id` → update player
 
-- DELETE /players/:id → delete player
+- `DELETE /players/:id` → delete player
