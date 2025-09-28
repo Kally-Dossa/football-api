@@ -1,13 +1,15 @@
 # Football API 
-A simple RESTful API built with **Express.js** and **MongoDB** (using **Mongoose**) for retrieving football (soccer) data — matches, teams, players, etc.
+A simple RESTful API built with **Express.js** and **MongoDB** (using **Mongoose**) for retrieving football (soccer) data — teams and players.
+It is easy to set up locally, and already deployed on Railway for quick online access.
 
-## Features
+## Overview
 
-- CRUD operations for teams, players, matches  
+- Create, read, update, and delete (CRUD) teams
 - JSON-based API  
-- Organized route structure  
-- Data models (e.g. using `models/`)  
-- Easily extensible
+Base URL (local): `http://localhost:5000/teams`
+Base URL (local): `http://localhost:5000/players`
+Base URL (Railway): `https://football-api-production.up.railway.app/teams`
+Base URL (Railway): `https://football-api-production.up.railway.app/players`
 
 ## Get Started
 
@@ -22,3 +24,40 @@ A simple RESTful API built with **Express.js** and **MongoDB** (using **Mongoose
 npm install
 ```
 
+**3. Create .ennv file**
+ ```bash
+//Create .env file with your MongoDB connection string
+MONGODB_URI=mongodb://localhost:27017/FootballDB
+PORT=5000
+```
+
+**4. Start**
+ ```bash
+node index.js
+```
+The API will be available at `http://localhost:5000/teams`
+The API will be available at `http://localhost:5000/players`
+
+## API Endpoints
+**Teams**
+- GET /teams → list all teams
+
+- POST /teams → create new team
+
+- GET /teams/:id → get team by id
+
+- PUT /teams/:id → update team
+
+- DELETE /teams/:id → delete team
+
+**Players**
+
+- GET /players → list all players
+
+- POST /players → create new player
+
+- GET /players/:id → get player by id
+
+- PUT /players/:id → update player
+
+- DELETE /players/:id → delete player
